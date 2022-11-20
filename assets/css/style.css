@@ -1,0 +1,15 @@
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+            
+.menu-content {
+    display: none;
+    position: absolute;
+    background-color: #017575;
+    min-width: 160px;
+    z-index: 1;
+}
+
+.top-buffer { margin-top:20px; }
+
