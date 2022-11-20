@@ -1,0 +1,157 @@
+<!-- Core Layout: 
+        1 Landing page
+        4 visualizations pages
+        1 comparison page
+        1 data page
+    Every page must have a navigation menu containing:
+        Site Name that returns to Landing page
+        Drop down page named 'Plots' that provides navigation to the 4 visualization pages
+        Link to comparisons page
+        Link to data page
+        Responsive
+         -->
+
+<!DOCTYPE html>
+<html lang="en_us">
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Data Visualization</title>
+        
+        <!-- Load Bootstrap -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class ="col">
+                    <nav class="navbar navbar-expand-lg bg-light">
+
+                        <div class="container-fluid">
+
+                            <a class="navbar-brand" href="#">Title</a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target = "#navbarContent" aria-controls="navbarContent" aria-expanded="false" arial-label="Toggle navigation" >
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarContent">
+                                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="data.html">Data</a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="comparison.html">Side-By-Side</a>
+                                    </li>
+
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Plots
+                                        </a>
+
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="visualizations/fig1.html">Figure 1</a> </li>
+                                            <li><a class="dropdown-item" href="visualizations/fig2.html">Figure 2</a> </li>
+                                            <li><a class="dropdown-item" href="visualizations/fig3.html">Figure 3</a> </li>
+                                            <li><a class="dropdown-item" href="visualizations/fig4.html">Figure 4</a> </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row row-cols-md-2 g-2 mt-0">
+                    <div class="col">
+                        <div class="jumbotron">
+                            <h1 class="display-4"><Center>About This Website</Center></h1>
+                        </div>
+                        <div class="card md-3">
+                            <img src="https://i.picsum.photos/id/931/800/100.jpg?hmac=K-SFOlWQ5Nr3Q2B12o40mjJhuxvUXGUk9uAgAxdO7DI"  class="card-img-top" alt="lorumpicsum">
+                        </div>
+                        <p class="lead"><Center>This website was created as part of a project to visualize weather data based on latitudinal position.</Center></p>
+                        <p class="lead"><Center>This website also acts as a demonstration of data visualization utilizing HTML and CSS elements with the assistance of Bootstrap.</Center></p>                
+                        <hr class="my-4">
+                        <div class="container-fluid">                        
+                            <p>
+                                In the year 1835 the advent of modern weather forcasting began. With the invention of the eletric telegraph, weather reports were now a commodity that could
+                                be recived nearly instantenously. From this innovation, through to the modern day, immense progress continues to be made to improve the ability to track, record,
+                                predict, and forecast the weather. One such feat of this progress is the ability to access weather data from tens of thousands of weather recording stations/instruments at a
+                                moments notice. All by the simplicity of a URL.
+                            </p>
+                            <p>
+                                Thanks to the <a href="https://openweathermap.org/current" target="_blank" class="link-primary">OpenWeather Current Weather Data API</a> the ability to access
+                                global weather data is open source data. With that kind of access, one can easily explore locale dependant weather related questions.
+                                What is the temperature in a given city? Is it windy in that city? And the humidity? Well, of course this is all simply accessed with a quick Google search.
+                                Now, what if you wanted to know the answer to these quesitons for hundreds of cities, at once?
+                            </p>
+                            <p>
+                                The data visualized in this website was gathered on that very premise. <b>IS</b> there an observable difference in the weather the closer one gets to the
+                                equator? Surely, it must be. So, utilizing Python to make API calls to Open Weathers free service, 555 cities were queried for their weather data.
+                                The data recieved was transformed into plots found on this website by using Matplotlib. These plots visualize the latitude of the cities in the datset 
+                                plotted against different weather elements. 
+                            </p>       
+                        </div>
+                    </div>
+                <div class="container-fluid">    
+                    <div class="row row-cols-2 row-cols-md-2 g-4">
+                        <div class="col-sm-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title"> </h3>
+                                    <h3 class="card-title"><center>Temperature vs Latitude</center></h3>
+                                </div>
+                                <a href="visualizations/fig1.html" class="stretched-link"></a>
+                                <img class="card-img-bottom" src="assets/images/temperature_latitude.png"  alt="fig1">
+                            </div>
+                        </div>
+            
+                        <div class="col">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title"><center>Humidity vs Latitude</center></h3>
+                                </div>
+                                <a href="visualizations/fig2.html" class="stretched-link"></a>
+                                <img src="assets/images/humidity_latitude.png" card-img-bottom alt="fig2">
+                            </div>
+                        </div>
+            
+                        <div class="col">
+                            <div class="card">
+                                <a href="visualizations/fig3.html" class="stretched-link"></a>
+                                <img src="assets/images/windspeed_latitude.png" alt="fig3">
+                                <div class="card-body">
+                                    <h3 class="card-title"><center>Windspeed vs Latitude</center></h3>                         
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col">
+                            <div class="card">
+                                <a href="visualizations/fig4.html" class="stretched-link"></a>
+                                <img src="assets/images/cloudiness_latitude.png"  card-img-bottom alt="fig3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Cloudiness vs Latitude</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </body>
+
+</html>
